@@ -33,6 +33,8 @@ public class Locations implements Map<Integer, Location> {
                     eof = true;
                 }
             }
+        } catch (InvalidClassException e) {
+            System.out.println("InvalidClassException " + e.getMessage());
         } catch (IOException io) {
             System.out.println("IO Exception " + io.getMessage());
         } catch (ClassNotFoundException e) {
